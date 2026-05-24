@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
 
+
 export const metadata: Metadata = {
   title: "Life Savers of Palashnagar",
   description: "Find and register blood donors easily",
