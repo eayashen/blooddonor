@@ -3,7 +3,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "Blood Donor List",
+  title: "Life Savers of Palashnagar",
   description: "Find and register blood donors easily",
 };
 

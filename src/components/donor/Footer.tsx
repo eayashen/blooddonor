@@ -6,7 +6,7 @@ import SuggestionModal from "./SuggestionModal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import profilePic from "@/assets/eayashen.jpeg";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent,DialogTitle } from "@/components/ui/dialog";
 import poster from "@/assets/poster.png";
 
 export default function Footer() {
@@ -81,16 +81,20 @@ export default function Footer() {
       <SuggestionModal open={openSuggestion} onOpenChange={setOpenSuggestion} />
 
       <Dialog open={openProfile} onOpenChange={setOpenProfile}>
-        <DialogContent className="w-fit max-w-none border-0 bg-transparent p-0 shadow-none">
-          <div className="relative inline-block">
-            <Image
-              src={poster}
-              alt="Profile Full View"
-              width={poster.width}
-              height={poster.height}
-              className="h-auto w-auto rounded-xl"
-            />
-          </div>
+        <DialogContent className="border-0 bg-transparent p-0 shadow-none w-auto h-auto flex items-center justify-center">
+          
+          <DialogTitle className="sr-only">
+            Message
+          </DialogTitle>
+
+          <Image
+            src={poster}
+            alt="Profile Full View"
+            width={poster.width}
+            height={poster.height}
+            className="w-auto h-auto max-w-[90vw] md:max-w-[70vw] max-h-[90vh] md:max-h-[70vh] object-contain rounded-xl block mx-auto"
+          />
+
         </DialogContent>
       </Dialog>
     </footer>
